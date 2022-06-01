@@ -19,7 +19,7 @@ pipeline{
         }
         stage('Test results'){
             steps{
-                sh 'pip install python-pytest pytest-cov'
+                sh 'pip install pytest'
                 sh 'pytest --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml'
             }
         }
