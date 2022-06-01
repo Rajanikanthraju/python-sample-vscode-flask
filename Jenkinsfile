@@ -7,5 +7,11 @@ pipeline{
                     branch:'sprint_develop'
             }
         }
+        stage ('install dependencies'){
+            steps{
+                sh 'pip install'
+                sh 'pip setuptools wheel'
+            }
+        }
     }
     }
