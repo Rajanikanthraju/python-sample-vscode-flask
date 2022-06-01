@@ -10,7 +10,12 @@ pipeline{
         stage ('install dependencies'){
             steps{
                 sh 'pip install setuptools wheel'
-                            }
+                 }
+        }
+        stage('Install requirements'){
+            steps{
+              sh  'pip install -r requirements.txt'
+            }
         }
     }
     }
