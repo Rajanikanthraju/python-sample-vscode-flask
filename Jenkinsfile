@@ -17,5 +17,10 @@ pipeline{
               sh  'pip install -r requirements.txt'
             }
         }
+        stage('Test results'){
+            steps{
+                sh 'pip install pytest pytest-cov'
+            }
+        }
     }
     }
