@@ -9,9 +9,8 @@ pipeline{
         }
         stage ('install dependencies'){
             steps{
-                sh 'pip install'
-                sh 'pip setuptools wheel'
-            }
+                sh 'pip install setuptools wheel'
+                            }
         }
     }
     }
